@@ -1,11 +1,4 @@
 # 使用步骤
-## 下载模型
-从HuggingFace下载模型mistralai/Mistral-7B-v0.1，并且做量化处理（Quantize）来加速处理过程
-```console
-# 目录：/lora
-python convert.py --hf-path mistralai/Mistral-7B-v0.1 -q
-```
-
 ## 使用对话数据（已经完成）
 从[self-llm](https://github.com/datawhalechina/self-llm/blob/master/dataset/huanhuan.json)下载甄嬛对话文件
 目标目录：data_甄嬛
@@ -13,6 +6,12 @@ python convert.py --hf-path mistralai/Mistral-7B-v0.1 -q
 ```console
 # 目录：/lora/data_甄嬛
 python split.py
+```
+
+## 下载模型
+从HuggingFace下载模型mistralai/Mistral-7B-v0.1，并且做量化处理（Quantize）来加速处理过程
+```console
+python convert.py --hf-path mistralai/Mistral-7B-v0.1 -q
 ```
 
 ## 运行Lora微调
